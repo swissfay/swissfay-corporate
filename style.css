@@ -38,6 +38,16 @@ height:80px;
 width:auto;
 display:block;
 }
+.logo img{
+height:80px;
+width:auto;
+display:block;
+transition:all .3s ease;
+}
+
+.logo img:hover{
+transform:scale(1.03);
+}
 
 nav a{
 margin-left:20px;
