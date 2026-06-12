@@ -1,178 +1,527 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Swissfay Finance | Structured Finance & Strategic Investments</title>
-<link rel="stylesheet" href="/swissfay-corporate/style.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#0b1f3a;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+background:white;
+padding:18px 0;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo img{
+height:78px;
+width:auto;
+display:block;
+}
+
+nav a{
+margin-left:22px;
+text-decoration:none;
+color:#071A35;
+font-weight:600;
+font-size:15px;
+}
+
+nav a:hover{
+color:#c9a35f;
+}
+
+.hero{
+min-height:88vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg, rgba(7,26,53,0.92), rgba(7,26,53,0.70), rgba(7,26,53,0.25)),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:780px;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.hero h2{
+font-size:26px;
+font-weight:400;
+color:#c9a35f;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:35px;
+max-width:720px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 34px;
+background:#c9a35f;
+color:#071A35;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+margin-right:15px;
+}
+
+.btn.secondary{
+background:white;
+color:#071A35;
+}
+
+.section{
+padding:85px 0;
+}
+
+.section h2{
+font-size:38px;
+margin-bottom:20px;
+text-align:center;
+color:#071A35;
+}
+
+.section-intro{
+max-width:850px;
+margin:0 auto 50px;
+text-align:center;
+font-size:18px;
+color:#4b5563;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+border-top:4px solid #c9a35f;
+}
+
+.card h3{
+color:#071A35;
+margin-bottom:15px;
+font-size:22px;
+}
+
+.card p{
+color:#4b5563;
+}
+
+.dark{
+background:#071A35;
+color:white;
+}
+
+.dark h2{
+color:white;
+}
+
+.dark .section-intro{
+color:#d1d5db;
+}
+
+.dark .card{
+background:#0e2a52;
+color:white;
+border-top:4px solid #c9a35f;
+}
+
+.dark .card h3{
+color:white;
+}
+
+.dark .card p{
+color:#d1d5db;
+}
+
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.split img{
+width:100%;
+border-radius:18px;
+box-shadow:0 14px 34px rgba(0,0,0,0.18);
+}
+
+.split h2{
+text-align:left;
+}
+
+.split p{
+font-size:18px;
+color:#4b5563;
+margin-bottom:20px;
+}
+
+.dark .split p{
+color:#d1d5db;
+}
+
+.badges{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:25px;
+}
+
+.badges span{
+background:#eef2f7;
+padding:12px 18px;
+border-radius:40px;
+font-weight:bold;
+color:#071A35;
+}
+
+.dark .badges span{
+background:#102f5f;
+color:white;
+}
+
+.contact{
+background:white;
+padding:70px;
+border-radius:18px;
+box-shadow:0 10px 28px rgba(0,0,0,0.10);
+text-align:center;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin-bottom:12px;
+}
+
+footer{
+background:#071A35;
+color:white;
+padding:45px 0;
+text-align:center;
+}
+
+footer p{
+margin-top:10px;
+color:#d1d5db;
+}
+
+@media(max-width:850px){
+header .container{
+flex-direction:column;
+gap:20px;
+}
+
+nav{
+text-align:center;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.split{
+grid-template-columns:1fr;
+}
+
+.contact{
+padding:35px;
+}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        <img src="https://swissfay.github.io/swissfay-corporate/content.png" alt="Swissfay Finance">
-    </div>
-</header>
-
-
-        <nav>
-            <a href="#">Accueil</a>
-            <a href="about.html">Notre Groupe</a>
-            <a href="financing.html">Financement</a>
-            <a href="ppp.html">PPP</a>
-            <a href="trading.html">Trading</a>
-            <a href="advisory.html">Conseil</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="hero-content">
-
-        <h1>SWISSFAY FINANCE</h1>
-        <div style="font-size:40px;margin-bottom:20px;">
-🇨🇭
+<div class="container">
+<div class="logo">
+<img src="content.png" alt="Swissfay Finance">
 </div>
 
-        <p>
-            Bridging Governments, Investors and Global Opportunities
-        </p>
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#groupe">Notre Groupe</a>
+<a href="#expertises">Expertises</a>
+<a href="#secteurs">Secteurs</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
 
-        <p>
-            Société suisse spécialisée dans le financement structuré,
-            les PPP, le conseil stratégique, le trade finance
-            et les investissements internationaux.
-        </p>
+<section class="hero" id="accueil">
+<div class="container">
+<div class="hero-content">
 
-        <a href="mailto:info@swissfay.ch" class="btn">
-            Présenter un Projet
-        </a>
+<h1>SWISSFAY FINANCE</h1>
 
-    </div>
+<h2>Bridging Governments, Investors and Global Opportunities</h2>
+
+<p>
+Partenaire suisse spécialisé dans le financement structuré, les partenariats public-privé,
+les investissements stratégiques et le commerce international.
+</p>
+
+<a href="mailto:inf@swissfay.ch" class="btn">Présenter un Projet</a>
+<a href="#expertises" class="btn secondary">Découvrir nos expertises</a>
+
+</div>
+</div>
 </section>
 
-<section class="services">
+<section class="section" id="groupe">
+<div class="container split">
 
-    <div class="container">
+<div>
+<h2>Une plateforme suisse pour les projets stratégiques</h2>
 
-        <h2>Nos Expertises</h2>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>Financement Structuré</h3>
-                <p>
-                    Solutions de financement pour projets publics
-                    et privés.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Partenariats Public-Privé</h3>
-                <p>
-                    Structuration et accompagnement de projets PPP.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Trading International</h3>
-                <p>
-                    Matières premières et commerce international.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Conseil Stratégique</h3>
-                <p>
-                    Structuration financière et développement international.
-                </p>
-            </div>
-            <div class="card">
-<h3>Trade Finance</h3>
 <p>
-Solutions de financement du commerce international.
+Swissfay Finance accompagne les gouvernements, investisseurs institutionnels,
+entreprises et partenaires internationaux dans la structuration, le financement
+et l’exécution de projets à fort impact économique.
 </p>
+
+<p>
+Notre rôle est de créer des ponts solides entre les besoins publics,
+les capitaux privés, les partenaires industriels et les opportunités internationales.
+</p>
+
+<div class="badges">
+<span>Swiss Excellence</span>
+<span>Structured Finance</span>
+<span>PPP</span>
+<span>International Trade</span>
+</div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Finance internationale">
+
+</div>
+</section>
+
+<section class="section dark" id="expertises">
+<div class="container">
+
+<h2>Nos Expertises</h2>
+
+<p class="section-intro">
+Swissfay Finance intervient sur des opérations complexes nécessitant une approche
+financière rigoureuse, une coordination internationale et une exécution structurée.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Financement Structuré</h3>
+<p>Structuration de financements pour projets publics et privés, infrastructures, logement, énergie et agriculture.</p>
+</div>
+
+<div class="card">
+<h3>Partenariats Public-Privé</h3>
+<p>Conception, structuration et accompagnement de projets PPP entre États, investisseurs et opérateurs privés.</p>
+</div>
+
+<div class="card">
+<h3>Trading International</h3>
+<p>Mise en relation d’acheteurs, fournisseurs et partenaires dans le commerce international de matières premières.</p>
+</div>
+
+<div class="card">
+<h3>Conseil Stratégique</h3>
+<p>Accompagnement des gouvernements, institutions et entreprises dans la négociation et la structuration d’opérations complexes.</p>
 </div>
 
 <div class="card">
 <h3>Capital Raising</h3>
-<p>
-Mobilisation de capitaux auprès d'investisseurs internationaux.
-</p>
+<p>Mobilisation de capitaux auprès d’investisseurs privés, institutionnels, family offices et partenaires stratégiques.</p>
 </div>
 
 <div class="card">
-<h3>Sovereign Advisory</h3>
-<p>
-Conseil stratégique aux gouvernements et institutions publiques.
-</p>
+<h3>Trade Finance</h3>
+<p>Solutions de financement et sécurisation d’opérations de commerce international.</p>
 </div>
 
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
-<section class="sectors">
+<section class="section" id="secteurs">
+<div class="container">
 
-    <div class="container">
+<h2>Secteurs Prioritaires</h2>
 
-        <h2>Secteurs d'Intervention</h2>
+<p class="section-intro">
+Nous concentrons notre action sur des secteurs à fort impact économique,
+institutionnel et social.
+</p>
 
-        <ul>
-            <li>Logement</li>
-            <li>Infrastructures</li>
-            <li>Énergie</li>
-            <li>Agriculture</li>
-            <li>Défense</li>
-            <li>Matières Premières</li>
-        </ul>
+<div class="grid">
 
-    </div>
+<div class="card">
+<h3>Logement</h3>
+<p>Programmes résidentiels, logements institutionnels et projets immobiliers structurés.</p>
+</div>
 
+<div class="card">
+<h3>Infrastructures</h3>
+<p>Routes, ponts, équipements publics, plateformes logistiques et infrastructures économiques.</p>
+</div>
+
+<div class="card">
+<h3>Énergie</h3>
+<p>Projets énergétiques, solutions hybrides, développement durable et infrastructures associées.</p>
+</div>
+
+<div class="card">
+<h3>Agriculture</h3>
+<p>Chaînes de valeur agricoles, sécurité alimentaire, transformation et commerce de produits agricoles.</p>
+</div>
+
+<div class="card">
+<h3>Défense & Institutions</h3>
+<p>Projets gouvernementaux, logements militaires et infrastructures stratégiques.</p>
+</div>
+
+<div class="card">
+<h3>Matières Premières</h3>
+<p>Cuivre, cacao, riz, produits agricoles, produits miniers et commerce international.</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<section class="about">
+<section class="section dark">
+<div class="container split">
 
-    <div class="container">
+<img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1200&q=80" alt="Pont international">
 
-        <h2>Pourquoi Swissfay ?</h2>
+<div>
+<h2>Connecter les capitaux aux opportunités</h2>
 
-        <p>
-            Swissfay Finance accompagne les gouvernements,
-            investisseurs institutionnels et entreprises dans
-            la structuration et le financement de projets
-            stratégiques à fort impact économique.
-        </p>
+<p>
+À l’image d’un pont entre plusieurs économies, Swissfay Finance facilite
+la rencontre entre les gouvernements, les investisseurs, les entreprises
+et les partenaires internationaux.
+</p>
 
-    </div>
+<p>
+Notre mission est d’aider les projets stratégiques à passer de l’intention
+à la réalisation concrète, avec discipline, crédibilité et vision long terme.
+</p>
 
+<a href="mailto:inf@swissfay.ch" class="btn">Contacter Swissfay</a>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+
+<div class="contact">
+
+<h2>Présenter un projet</h2>
+
+<p>
+Vous représentez un gouvernement, une institution, une entreprise ou un investisseur ?
+</p>
+
+<p>
+Swissfay Finance est à votre disposition pour étudier vos besoins et structurer une solution adaptée.
+</p>
+
+<p><strong>Email :</strong> inf@swissfay.ch</p>
+
+<p>
+<strong>Adresse :</strong><br>
+Z.I La Coche 11<br>
+1852 Roche, Suisse
+</p>
+
+<a href="mailto:inf@swissfay.ch" class="btn">Envoyer une demande</a>
+
+</div>
+
+</div>
 </section>
 
 <footer>
-
-    <div class="container">
-
-        <h3>Swissfay Finance</h3>
-
-        <p>
-            Z.I La Coche 11<br>
-            1852 Roche - Suisse
-        </p>
-
-        <p>
-            info@swissfay.ch
-        </p>
-        <p>
-Bridging Governments, Investors and Global Opportunities
-</p>
-
-    </div>
-
+<div class="container">
+<h3>SWISSFAY FINANCE</h3>
+<p>Bridging Governments, Investors and Global Opportunities</p>
+<p>Z.I La Coche 11, 1852 Roche, Suisse</p>
+<p>inf@swissfay.ch</p>
+</div>
 </footer>
 
 </body>
 </html>
+```
+
+
+    
