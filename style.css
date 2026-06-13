@@ -59,7 +59,9 @@ background:linear-gradient(
 rgba(0,51,102,0.85),
 rgba(0,51,102,0.85)
 ),
-url("https://images.unsplash.com/photo-1577083165633-14ebcdb0f658?auto=format&fit=crop&w=1800&q=80")
+background:
+linear-gradient(rgba(7,26,53,.75),rgba(7,26,53,.75)),
+url("Geneve.jpg");
 background-size:cover;
 background-position:center;
 color:white;
