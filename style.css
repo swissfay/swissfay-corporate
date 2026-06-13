@@ -169,4 +169,75 @@ font-size:38px;
 font-size:18px;
 }
 
+}.hero{
+background:
+linear-gradient(
+rgba(0,35,80,.75),
+rgba(0,35,80,.75)
+),
+url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+min-height:85vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+color:white;
+}
+
+.hero-overlay{
+width:100%;
+padding:120px 20px;
+}
+
+.hero-content{
+max-width:900px;
+margin:auto;
+}
+
+.hero h1{
+font-size:72px;
+margin-bottom:25px;
+letter-spacing:2px;
+}
+
+.subtitle{
+font-size:24px;
+color:#d4af37;
+margin-bottom:30px;
+}
+
+.description{
+font-size:22px;
+line-height:1.8;
+margin-bottom:45px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+background:#d4af37;
+color:#00254d;
+padding:16px 35px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+padding:16px 35px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
 }
