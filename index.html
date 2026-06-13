@@ -1,296 +1,84 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swissfay Finance | Structured Finance & Strategic Investments</title>
+<title>Swissfay Finance</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:#071a35}
+a{text-decoration:none;color:inherit}
+.container{width:88%;max-width:1250px;margin:auto}
 
-body{
-background:#f5f7fa;
-color:#0b1f3a;
-line-height:1.6;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-header{
-background:white;
-padding:18px 0;
-box-shadow:0 2px 12px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
-z-index:100;
-}
-
-header .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo img{
-height:78px;
-width:auto;
-display:block;
-}
-
-nav a{
-margin-left:22px;
-text-decoration:none;
-color:#071A35;
-font-weight:600;
-font-size:15px;
-}
-
-nav a:hover{
-color:#c9a35f;
-}
+header{background:#fff;padding:18px 0;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo-wrap{display:flex;align-items:center;gap:14px}
+.logo-wrap img{height:62px}
+.logo-text strong{font-size:24px;color:#071a35}
+.logo-text span{display:block;font-size:14px;color:#6b7280}
+nav a{margin:0 18px;font-weight:700;color:#071a35}
+nav a:hover{color:#c9a35f}
+.header-btn{background:#071a35;color:#fff;padding:15px 28px;border-radius:6px;font-weight:700}
 
 .hero{
-min-height:88vh;
-display:flex;
-align-items:center;
+min-height:620px;
 background:
-linear-gradient(90deg, rgba(7,26,53,0.92), rgba(7,26,53,0.70), rgba(7,26,53,0.25)),
-url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+linear-gradient(90deg,rgba(7,26,53,.95),rgba(7,26,53,.70),rgba(7,26,53,.10)),
+url("https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80");
 background-size:cover;
 background-position:center;
 color:white;
-}
-
-.hero-content{
-max-width:780px;
-}
-
-.hero h1{
-font-size:58px;
-line-height:1.1;
-margin-bottom:20px;
-letter-spacing:1px;
-}
-
-.hero h2{
-font-size:26px;
-font-weight:400;
-color:#c9a35f;
-margin-bottom:25px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:35px;
-max-width:720px;
-}
-
-.btn{
-display:inline-block;
-padding:16px 34px;
-background:#c9a35f;
-color:#071A35;
-text-decoration:none;
-font-weight:bold;
-border-radius:6px;
-margin-right:15px;
-}
-
-.btn.secondary{
-background:white;
-color:#071A35;
-}
-
-.section{
-padding:85px 0;
-}
-
-.section h2{
-font-size:38px;
-margin-bottom:20px;
-text-align:center;
-color:#071A35;
-}
-
-.section-intro{
-max-width:850px;
-margin:0 auto 50px;
-text-align:center;
-font-size:18px;
-color:#4b5563;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:14px;
-box-shadow:0 8px 24px rgba(0,0,0,0.08);
-border-top:4px solid #c9a35f;
-}
-
-.card h3{
-color:#071A35;
-margin-bottom:15px;
-font-size:22px;
-}
-
-.card p{
-color:#4b5563;
-}
-
-.dark{
-background:#071A35;
-color:white;
-}
-
-.dark h2{
-color:white;
-}
-
-.dark .section-intro{
-color:#d1d5db;
-}
-
-.dark .card{
-background:#0e2a52;
-color:white;
-border-top:4px solid #c9a35f;
-}
-
-.dark .card h3{
-color:white;
-}
-
-.dark .card p{
-color:#d1d5db;
-}
-
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
+display:flex;
 align-items:center;
 }
+.hero h1{font-size:62px;letter-spacing:3px;font-family:Georgia,serif;margin-bottom:20px}
+.gold-line{width:70px;height:3px;background:#c9a35f;margin-bottom:22px}
+.hero h2{font-size:22px;color:#c9a35f;margin-bottom:22px;text-transform:uppercase}
+.hero p{font-size:20px;line-height:1.7;max-width:680px;margin-bottom:32px}
+.btn{display:inline-block;padding:16px 32px;border-radius:5px;font-weight:800;margin-right:12px}
+.btn.gold{background:#c9a35f;color:#071a35}
+.btn.outline{border:1px solid white;color:white}
 
-.split img{
-width:100%;
-border-radius:18px;
-box-shadow:0 14px 34px rgba(0,0,0,0.18);
-}
+.trust{background:#071a35;color:white;padding:32px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.trust-item{border-right:1px solid rgba(255,255,255,.25);padding-right:20px}
+.trust-item:last-child{border-right:0}
+.trust-item h3{color:#c9a35f;margin-bottom:8px}
+.trust-item p{color:#d1d5db}
 
-.split h2{
-text-align:left;
-}
+.section{padding:70px 0}
+.section h2{text-align:center;font-size:34px;font-family:Georgia,serif;margin-bottom:12px}
+.section-line{width:70px;height:3px;background:#c9a35f;margin:0 auto 40px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:white;padding:30px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.icon{width:52px;height:52px;border-radius:50%;background:#071a35;color:#c9a35f;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
+.card h3{font-size:19px;margin-bottom:15px}
+.card p{color:#4b5563;line-height:1.6;margin-bottom:20px}
+.card a{font-weight:800;color:#071a35}
 
-.split p{
-font-size:18px;
-color:#4b5563;
-margin-bottom:20px;
-}
+.stats{background:white;border:1px solid #e5e7eb;padding:25px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat strong{font-size:28px;color:#071a35}
+.stat span{display:block;color:#6b7280;margin-top:6px}
 
-.dark .split p{
-color:#d1d5db;
-}
+.cta{background:#071a35;color:white;padding:50px 0;margin-top:40px}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta h2{text-align:left;color:white;font-size:30px}
+.cta p{color:#d1d5db;max-width:700px;margin-top:10px}
 
-.badges{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin-top:25px;
-}
+footer{background:white;padding:45px 0;color:#4b5563}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h3{color:#071a35;margin-bottom:15px}
+.footer-bottom{border-top:1px solid #e5e7eb;margin-top:30px;padding-top:20px;display:flex;justify-content:space-between}
 
-.badges span{
-background:#eef2f7;
-padding:12px 18px;
-border-radius:40px;
-font-weight:bold;
-color:#071A35;
-}
-
-.dark .badges span{
-background:#102f5f;
-color:white;
-}
-
-.contact{
-background:white;
-padding:70px;
-border-radius:18px;
-box-shadow:0 10px 28px rgba(0,0,0,0.10);
-text-align:center;
-}
-
-.contact h2{
-margin-bottom:20px;
-}
-
-.contact p{
-font-size:18px;
-margin-bottom:12px;
-}
-
-footer{
-background:#071A35;
-color:white;
-padding:45px 0;
-text-align:center;
-}
-
-footer p{
-margin-top:10px;
-color:#d1d5db;
-}
-
-@media(max-width:850px){
-header .container{
-flex-direction:column;
-gap:20px;
-}
-
-nav{
-text-align:center;
-}
-
-nav a{
-display:inline-block;
-margin:8px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero h2{
-font-size:22px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.split{
-grid-template-columns:1fr;
-}
-
-.contact{
-padding:35px;
-}
+@media(max-width:900px){
+.header-inner{flex-direction:column;gap:15px}
+nav{text-align:center}
+nav a{display:inline-block;margin:8px}
+.hero h1{font-size:42px}
+.trust-grid,.cards,.stats,.footer-grid{grid-template-columns:1fr}
+.cta-inner{flex-direction:column;text-align:center}
+.cta h2{text-align:center}
 }
 </style>
 </head>
@@ -298,9 +86,13 @@ padding:35px;
 <body>
 
 <header>
-<div class="container">
-<div class="logo">
+<div class="container header-inner">
+<div class="logo-wrap">
 <img src="content.png" alt="Swissfay Finance">
+<div class="logo-text">
+<strong>Swissfay Finance</strong>
+<span>Vous êtes au bon endroit</span>
+</div>
 </div>
 
 <nav>
@@ -310,220 +102,126 @@ padding:35px;
 <a href="#secteurs">Secteurs</a>
 <a href="#contact">Contact</a>
 </nav>
+
+<a class="header-btn" href="mailto:info@swissfay.ch">Nous contacter</a>
 </div>
 </header>
 
-<section class="hero">
-
-<div class="hero-overlay">
-
-<div class="hero-content">
-
+<section class="hero" id="accueil">
+<div class="container">
 <h1>SWISSFAY FINANCE</h1>
-
-<p class="subtitle">
-Structured Finance • PPP • Trade Finance • Strategic Investments
-</p>
-
-<p class="description">
-Connecting Governments, Investors and Global Opportunities.
-
-<br><br>
-
-Swiss expertise in structured finance,
-public-private partnerships,
-trade finance and strategic investments.
-</p>
-
-<section class="section" id="groupe">
-<div class="container split">
-
-<div>
-<h2>Une plateforme suisse pour les projets stratégiques</h2>
-
+<div class="gold-line"></div>
+<h2>Structured Finance • PPP • Trade Finance • Strategic Investments</h2>
 <p>
-Swissfay Finance accompagne les gouvernements, investisseurs institutionnels,
-entreprises et partenaires internationaux dans la structuration, le financement
-et l’exécution de projets à fort impact économique.
+Swissfay Finance accompagne les gouvernements, investisseurs institutionnels et entreprises
+dans la structuration, le financement et l’exécution de projets stratégiques à fort impact.
 </p>
-
-<p>
-Notre rôle est de créer des ponts solides entre les besoins publics,
-les capitaux privés, les partenaires industriels et les opportunités internationales.
-</p>
-
-<div class="badges">
-<span>Swiss Excellence</span>
-<span>Structured Finance</span>
-<span>PPP</span>
-<span>International Trade</span>
-</div>
-</div>
-
-<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Finance internationale">
-
+<a class="btn gold" href="mailto:info@swissfay.ch">Présenter un projet →</a>
+<a class="btn outline" href="mailto:info@swissfay.ch">Contact institutionnel →</a>
 </div>
 </section>
 
-<section class="section dark" id="expertises">
+<section class="trust">
+<div class="container trust-grid">
+<div class="trust-item">
+<h3>Expertise suisse</h3>
+<p>Rigueur, qualité et conformité aux standards internationaux.</p>
+</div>
+<div class="trust-item">
+<h3>Réseau international</h3>
+<p>Accès à un réseau mondial d’investisseurs et de partenaires.</p>
+</div>
+<div class="trust-item">
+<h3>Solutions sur mesure</h3>
+<p>Des solutions adaptées à chaque projet et chaque contexte.</p>
+</div>
+<div class="trust-item">
+<h3>Impact durable</h3>
+<p>Des projets créateurs de valeur économique et sociale.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="expertises">
 <div class="container">
+<h2>Nos domaines d'intervention</h2>
+<div class="section-line"></div>
 
-<h2>Nos Expertises</h2>
-
-<p class="section-intro">
-Swissfay Finance intervient sur des opérations complexes nécessitant une approche
-financière rigoureuse, une coordination internationale et une exécution structurée.
-</p>
-
-<div class="grid">
-
+<div class="cards">
 <div class="card">
+<div class="icon">🏛</div>
 <h3>Financement Structuré</h3>
-<p>Structuration de financements pour projets publics et privés, infrastructures, logement, énergie et agriculture.</p>
+<p>Structuration et mobilisation de financements pour projets de logement, défense, infrastructures, énergie et agriculture.</p>
+<a href="#">En savoir plus →</a>
 </div>
 
 <div class="card">
-<h3>Partenariats Public-Privé</h3>
-<p>Conception, structuration et accompagnement de projets PPP entre États, investisseurs et opérateurs privés.</p>
+<div class="icon">🤝</div>
+<h3>PPP & Gouvernements</h3>
+<p>Conception, structuration et mise en œuvre de partenariats durables entre secteurs public et privé.</p>
+<a href="#">En savoir plus →</a>
 </div>
 
 <div class="card">
-<h3>Trading International</h3>
-<p>Mise en relation d’acheteurs, fournisseurs et partenaires dans le commerce international de matières premières.</p>
-</div>
-
-<div class="card">
-<h3>Conseil Stratégique</h3>
-<p>Accompagnement des gouvernements, institutions et entreprises dans la négociation et la structuration d’opérations complexes.</p>
-</div>
-
-<div class="card">
-<h3>Capital Raising</h3>
-<p>Mobilisation de capitaux auprès d’investisseurs privés, institutionnels, family offices et partenaires stratégiques.</p>
-</div>
-
-<div class="card">
+<div class="icon">🌍</div>
 <h3>Trade Finance</h3>
-<p>Solutions de financement et sécurisation d’opérations de commerce international.</p>
+<p>Commerce international de matières premières et de produits stratégiques avec un réseau mondial de partenaires.</p>
+<a href="#">En savoir plus →</a>
 </div>
 
+<div class="card">
+<div class="icon">👤</div>
+<h3>Conseil Stratégique</h3>
+<p>Conseil et accompagnement sur mesure pour la structuration d’opérations complexes à l’international.</p>
+<a href="#">En savoir plus →</a>
+</div>
 </div>
 </div>
 </section>
 
 <section class="section" id="secteurs">
-<div class="container">
-
-<h2>Secteurs Prioritaires</h2>
-
-<p class="section-intro">
-Nous concentrons notre action sur des secteurs à fort impact économique,
-institutionnel et social.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<h3>Logement</h3>
-<p>Programmes résidentiels, logements institutionnels et projets immobiliers structurés.</p>
-</div>
-
-<div class="card">
-<h3>Infrastructures</h3>
-<p>Routes, ponts, équipements publics, plateformes logistiques et infrastructures économiques.</p>
-</div>
-
-<div class="card">
-<h3>Énergie</h3>
-<p>Projets énergétiques, solutions hybrides, développement durable et infrastructures associées.</p>
-</div>
-
-<div class="card">
-<h3>Agriculture</h3>
-<p>Chaînes de valeur agricoles, sécurité alimentaire, transformation et commerce de produits agricoles.</p>
-</div>
-
-<div class="card">
-<h3>Défense & Institutions</h3>
-<p>Projets gouvernementaux, logements militaires et infrastructures stratégiques.</p>
-</div>
-
-<div class="card">
-<h3>Matières Premières</h3>
-<p>Cuivre, cacao, riz, produits agricoles, produits miniers et commerce international.</p>
-</div>
-
-</div>
+<div class="container stats">
+<div class="stat"><strong>+2 Md CHF</strong><span>de projets accompagnés</span></div>
+<div class="stat"><strong>15+</strong><span>pays couverts</span></div>
+<div class="stat"><strong>Réseau mondial</strong><span>d’investisseurs</span></div>
+<div class="stat"><strong>Expertise suisse</strong><span>au service de vos ambitions</span></div>
 </div>
 </section>
 
-<section class="section dark">
-<div class="container split">
-
-<img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1200&q=80" alt="Pont international">
-
+<section class="cta" id="contact">
+<div class="container cta-inner">
 <div>
-<h2>Connecter les capitaux aux opportunités</h2>
-
+<h2>Donnez une dimension internationale à vos projets</h2>
 <p>
-À l’image d’un pont entre plusieurs économies, Swissfay Finance facilite
-la rencontre entre les gouvernements, les investisseurs, les entreprises
-et les partenaires internationaux.
+Que vous représentiez un gouvernement, une institution, une entreprise ou un investisseur,
+Swissfay Finance est à vos côtés pour structurer, financer et exécuter vos initiatives stratégiques.
 </p>
-
-<p>
-Notre mission est d’aider les projets stratégiques à passer de l’intention
-à la réalisation concrète, avec discipline, crédibilité et vision long terme.
-</p>
-
-<a href="mailto:inf@swissfay.ch" class="btn">Contacter Swissfay</a>
 </div>
-
-</div>
-</section>
-
-<section class="section" id="contact">
-<div class="container">
-
-<div class="contact">
-
-<h2>Présenter un projet</h2>
-
-<p>
-Vous représentez un gouvernement, une institution, une entreprise ou un investisseur ?
-</p>
-
-<p>
-Swissfay Finance est à votre disposition pour étudier vos besoins et structurer une solution adaptée.
-</p>
-
-<p><strong>Email :</strong> inf@swissfay.ch</p>
-
-<p>
-<strong>Adresse :</strong><br>
-Z.I La Coche 11<br>
-1852 Roche, Suisse
-</p>
-
-<a href="mailto:inf@swissfay.ch" class="btn">Envoyer une demande</a>
-
-</div>
-
+<a class="btn gold" href="mailto:info@swissfay.ch">Parler à nos équipes →</a>
 </div>
 </section>
 
 <footer>
-<div class="container">
-<h3>SWISSFAY FINANCE</h3>
-<p>Bridging Governments, Investors and Global Opportunities</p>
-<p>Z.I La Coche 11, 1852 Roche, Suisse</p>
-<p>inf@swissfay.ch</p>
+<div class="container footer-grid">
+<div>
+<h3>Swissfay Finance</h3>
+<p>Partenaire suisse en financement structuré, partenariats public-privé, trade finance et investissements stratégiques.</p>
+</div>
+<div>
+<h3>Navigation</h3>
+<p>Accueil<br>Notre Groupe<br>Expertises<br>Contact</p>
+</div>
+<div>
+<h3>Contact</h3>
+<p>info@swissfay.ch<br>Z.I La Coche 11<br>1852 Roche, Suisse</p>
+</div>
+</div>
+
+<div class="container footer-bottom">
+<span>© 2026 Swissfay Finance. Tous droits réservés.</span>
+<span>Bridging Governments, Investors and Global Opportunities.</span>
 </div>
 </footer>
 
 </body>
 </html>
-```
-
-
-    
